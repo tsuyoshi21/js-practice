@@ -1,2 +1,2 @@
 # js-practice
-JavaScript教育用
+JavaScript研修用
