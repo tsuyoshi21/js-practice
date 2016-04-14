@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
 
-    var btn   = document.getElementById('registration');
     var input = document.getElementById('task');
+    var btn   = document.getElementById('registration');
     var list  = document.getElementById('taskList');
 
     btn.addEventListener('click', function (e){

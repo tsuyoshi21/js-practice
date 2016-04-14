@@ -2,7 +2,8 @@ window.addEventListener('load', function () {
 
     var input     = document.getElementById('task');
     var registBtn = document.getElementById('registration');
-    var list      = document.getElementById('taskList');
+    var taskList  = document.getElementById('taskList');
+    var doneList  = document.getElementById('doneList');
 
     registBtn.addEventListener('click', function (e){
         var item    = document.createElement('li');
@@ -12,10 +13,12 @@ window.addEventListener('load', function () {
         doneBtn.innerHTML = '完了';
 
         item.appendChild(doneBtn);
-        list.appendChild(item);
+        taskList.appendChild(item);
 
         doneBtn.addEventListener('click', function () {
-            list.removeChild(item);
+            taskList.removeChild(item);
+            doneList.appendChild(item);
+            item.removeChild(doneBtn);
         });
     });
 
